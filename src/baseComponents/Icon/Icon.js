@@ -1,4 +1,5 @@
 //https:oblador.github.io/react-native-vector-icons/
+//https:github.com/oblador/react-native-vector-icons?tab=readme-ov-file
 
 import {useState, useEffect} from 'react';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';

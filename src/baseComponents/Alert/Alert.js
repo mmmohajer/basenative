@@ -15,12 +15,6 @@ const Alert = () => {
   const dispatch = useDispatch();
   const notifications = useSelector(state => state.notifications);
 
-  const language = useSelector(state => state.language);
-
-  useEffect(() => {
-    console.log(notifications);
-  }, [notifications]);
-
   const determineNotifColor = notifType => {
     if (notifType === 'success') {
       return 'success';
