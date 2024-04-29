@@ -1,5 +1,7 @@
 npm install
 
+Copy .env.sample.js => .env.js
+
 Go to ios folder:
 Remove Podfile.lock
 pod deintegrate
