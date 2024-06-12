@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react';
-import {View, Text} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 
 import AppView from 'BaseComponents/ReusableComps/AppView';
@@ -15,11 +14,11 @@ const Alert = () => {
 
   const determineNotifColor = notifType => {
     if (notifType === 'success') {
-      return 'success';
+      return 'bg-green';
     } else if (notifType === 'error') {
-      return 'error';
+      return 'bg-red';
     } else if (notifType === 'warning') {
-      return 'warning';
+      return 'bg-yellow';
     }
   };
 

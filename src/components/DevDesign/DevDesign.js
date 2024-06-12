@@ -17,12 +17,12 @@ import TestText from './subs/TestText';
 import TestTextBox from './subs/TestTextBox';
 import TestToggler from './subs/TestToggler';
 import TestView from './subs/TestView';
-// import TestModal from './subs/TestModal';
+import TestModal from './subs/TestModal';
+import TestPopup from './subs/TestPopup';
+import TestLoading from './subs/TestLoading';
+import TestPrompt from './subs/TestPrompt';
+import TestAlert from './subs/TestAlert';
 // import TestImagePicker from './subs/TestImagePicker';
-// import TestPrompt from './subs/TestPrompt';
-// import TestLoading from './subs/TestLoading';
-// import TestPopup from './subs/TestPopup';
-// import TestAlert from './subs/TestAlert';
 
 import TitleSeparator from './subs/TitleSeparator';
 import {localStyles} from './localStyles';
@@ -32,7 +32,7 @@ const DevDesign = () => {
     <>
       <SafeAreaView>
         <ScrollView>
-          <AppView>
+          <AppView className="p-b-200">
             <TitleSeparator title="View" />
             <TestView />
 
@@ -66,19 +66,25 @@ const DevDesign = () => {
             <TitleSeparator title="Text Box" />
             <TestTextBox />
 
+            <TitleSeparator title="Modal" />
+            <TestModal />
+
+            <TitleSeparator title="Popup" />
+            <TestPopup />
+
+            <TitleSeparator title="Loader" />
+            <TestLoading />
+
+            <TitleSeparator title="Prompt" />
+            <TestPrompt />
+
+            <TitleSeparator title="TestAlert" />
+            <TestAlert />
+
             {/* 
-          <TitleSeparator title="Modal" />
-          <TestModal />
-          <TitleSeparator title="Loader" />
-          <TestLoading />
-          <TitleSeparator title="Popup" />
-          <TestPopup />
-          <TitleSeparator title="Prompt" />
-          <TestPrompt />
           <TitleSeparator title="Image Picker" />
           <TestImagePicker />
-          <TitleSeparator title="TestAlert" />
-          <TestAlert /> */}
+          */}
 
             {/* <TitleSeparator title="List" />
           <TestList /> */}

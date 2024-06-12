@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react';
-import {View, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 
 import AppView from 'BaseComponents/ReusableComps/AppView';
@@ -10,32 +9,18 @@ import {getDeviceDimensions} from 'Utils/helpers';
 import DataSubmittedSuccessfully from './subs/DataSubmittedSuccessfully';
 import {localStyles} from './localStyles';
 
-const Popup = ({children}) => {
-  const modalType = useSelector(state => state.modalType);
-  const modalProps = useSelector(state => state.modalProps);
+const Popup = () => {
+  const popupType = useSelector(state => state.popupType);
+  const popupProps = useSelector(state => state.popupProps);
 
   return (
     <>
       <AppView
-        zIndex={2}
-        style={{
-          position: 'absolute',
-          height: getDeviceDimensions().screen.height,
-        }}
-        isFullWidth
-        isCentralizedInX1Dir
-        isCentralizedInX2Dir>
-        <AppView
-          bgColor="gray"
-          heightInPercentage={100}
-          isFullWidth
-          isCentralizedInX1Dir
-          isCentralizedInX2Dir
-          opacity={0.7}
-          style={{position: 'absolute'}}
-        />
-        {modalType === 'data_submitted_successfully' && (
-          <DataSubmittedSuccessfully {...modalProps} />
+        hAlign="center"
+        vAlign="center"
+        className="z-2 width-per-100 pos-abs height-device">
+        {popupType === 'data_submitted_successfully' && (
+          <DataSubmittedSuccessfully {...popupProps} />
         )}
       </AppView>
     </>

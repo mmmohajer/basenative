@@ -5,21 +5,20 @@ import AppView from 'BaseComponents/ReusableComps/AppView';
 import AppText from 'BaseComponents/ReusableComps/AppText';
 import Button from 'BaseComponents/ReusableComps/Button';
 
-import {setPopupType} from 'Reducers/general/popupType';
+import {clearModal} from 'Utils/modal';
 
 import {localStyles} from '../localStyles';
 
-const TestPopup = () => {
+const DataSubmittedSuccessfully = () => {
   const dispatch = useDispatch();
 
   return (
     <>
-      <Button
-        btnText="Show Popup"
-        onPress={() => dispatch(setPopupType('data_submitted_successfully'))}
-      />
+      <AppView className="bg-green width-per-100 height-device">
+        <Button btnText="Close Modal" onPress={() => clearModal(dispatch)} />
+      </AppView>
     </>
   );
 };
 
-export default TestPopup;
+export default DataSubmittedSuccessfully;

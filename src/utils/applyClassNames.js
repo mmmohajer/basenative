@@ -8,6 +8,8 @@ import {
   FONT_SIZES,
 } from 'Styles/base/appVariables';
 
+import {getDeviceDimensions} from 'Utils/helpers';
+
 export const applyClassNames = className => {
   // Initialize an empty styles object to store the computed styles
   const styles = {};
@@ -170,8 +172,12 @@ export const applyClassNames = className => {
 
     try {
       if (cls.startsWith('height-')) {
-        const heightKey = cls.replace('height-', ''); // Extract the height key (e.g., 'header')
-        styles.height = HEIGHTS[heightKey]; // Set the height style
+        if (cls === 'height-device') {
+          styles.height = getDeviceDimensions().screen.height;
+        } else {
+          const heightKey = cls.replace('height-', ''); // Extract the height key (e.g., 'header')
+          styles.height = HEIGHTS[heightKey]; // Set the height style
+        }
       }
     } catch (error) {
       console.error(`Error processing height for class ${cls}:`, error);

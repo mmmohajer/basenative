@@ -1,12 +1,11 @@
 import {useState, useEffect} from 'react';
-import {View, Text} from 'react-native';
 import {useDispatch} from 'react-redux';
 
 import AppView from 'BaseComponents/ReusableComps/AppView';
 import AppText from 'BaseComponents/ReusableComps/AppText';
 import Button from 'BaseComponents/ReusableComps/Button';
 
-import {clearModal} from 'Utils/modal';
+import {clearPopup} from 'Utils/modal';
 
 import {localStyles} from '../localStyles';
 
@@ -15,7 +14,9 @@ const DataSubmittedSuccessfully = () => {
 
   return (
     <>
-      <Button btnText="Close Modal" onPress={() => clearModal(dispatch)} />
+      <AppView className="bg-green width-per-100 height-device">
+        <Button btnText="Close Modal" onPress={() => clearPopup(dispatch)} />
+      </AppView>
     </>
   );
 };

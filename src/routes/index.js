@@ -7,6 +7,7 @@ import Icon from 'BaseComponents/ReusableComps/Icon';
 
 import Home from 'Screens/Home';
 import Products from 'Screens/Products';
+import ScreenContainer from 'Components/ScreenWrappers/ScreenContainer';
 import DevDesign from 'Components/DevDesign';
 
 import {ProductNav} from './stackRoutes';
@@ -20,7 +21,9 @@ const Routes = () => {
   return (
     <>
       <NavigationContainer>
-        <DevDesign />
+        <ScreenContainer>
+          <DevDesign />
+        </ScreenContainer>
       </NavigationContainer>
     </>
   );

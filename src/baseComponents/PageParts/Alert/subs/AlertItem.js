@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import cx from 'classnames';
 import {View, Text} from 'react-native';
 import {useDispatch} from 'react-redux';
 
@@ -30,7 +31,7 @@ const AlertItem = ({isActive, message, bgColor, notifKey, ...props}) => {
   return (
     <>
       <AnimatedView
-        zIndex={2}
+        className="z-2"
         initialTranslateX={initialX}
         finalTranslateX={finalX}
         durationTime={200}
@@ -38,11 +39,10 @@ const AlertItem = ({isActive, message, bgColor, notifKey, ...props}) => {
         viewProps={{key: notifKey}}
         {...props}>
         <AppText
-          padding={2}
-          bgColor={bgColor}
-          brRad={5}
-          brThickness={1}
-          textProps={{color: 'white', isBold: true}}>
+          className={cx(
+            'p-all-16 br-rad-5 br-all-solid-1 text-white f-b',
+            bgColor,
+          )}>
           {message}
         </AppText>
         <Close onPress={() => removeAlertItem(dispatch, notifKey)} />

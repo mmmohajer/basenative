@@ -15,26 +15,10 @@ const Loading = () => {
   return (
     <>
       <AppView
-        zIndex={2}
-        style={{
-          position: 'absolute',
-          height: getDeviceDimensions().screen.height,
-        }}
-        isFullWidth
-        isCentralizedInX1Dir
-        isCentralizedInX2Dir>
-        <AppView
-          bgColor="gray"
-          heightInPercentage={100}
-          isFullWidth
-          isCentralizedInX1Dir
-          isCentralizedInX2Dir
-          opacity={0.7}
-          style={{position: 'absolute'}}
-        />
-        <AppText bgColor="red" padding={2} textProps={{color: 'white'}}>
-          Loading...
-        </AppText>
+        hAlign="center"
+        vAlign="center"
+        className="z-2 height-device pos-abs width-per-100 bg-green">
+        <AppText className="text-red p-all-16 bg-red">Loading...</AppText>
       </AppView>
     </>
   );

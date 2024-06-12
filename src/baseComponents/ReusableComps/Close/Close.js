@@ -12,15 +12,12 @@ const Close = ({onPress}) => {
   return (
     <>
       <AppTouchable
+        hAlign="center"
+        vAlign="center"
+        className="width-40 height-30 bg-blue br-all-solid-2 br-rad-5"
         type="highlight-no-effect"
-        touchableProps={{onPress}}
-        style={{position: 'absolute', top: 5, right: 5}}
-        widthInSize={40}
-        heightInSize={30}
-        isCentralizedInX1Dir
-        isCentralizedInX2Dir
-        brThickness={2}
-        brRad={5}>
+        onPress={onPress}
+        style={{position: 'absolute', top: 5, right: 5}}>
         <AppView>
           <Icon name="email" />
         </AppView>

@@ -6,8 +6,6 @@ import Button from 'BaseComponents/ReusableComps/Button';
 
 import {createAlert} from 'Utils/alert';
 
-import {styles, fontStyleFunc} from 'Styles';
-
 import {localStyles} from '../localStyles';
 
 const TestPrompt = () => {

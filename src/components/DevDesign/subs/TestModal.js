@@ -1,35 +1,22 @@
-import {View, Text} from 'react-native';
 import {useState} from 'react';
+import {useDispatch} from 'react-redux';
 
 import AppView from 'BaseComponents/ReusableComps/AppView';
 import AppText from 'BaseComponents/ReusableComps/AppText';
 import Button from 'BaseComponents/ReusableComps/Button';
-import AppModal from 'BaseComponents/AppModal';
 
-import {styles, fontStyleFunc} from 'Styles';
+import {setModalType} from 'Reducers/general/modalType';
 
 import {localStyles} from '../localStyles';
 
 const TestModal = () => {
-  const [isActive, setIsActive] = useState(false);
+  const dispatch = useDispatch();
   return (
     <>
       <Button
-        btnText={'View Modal'}
-        // iconType="email"
-        onPress={() => setIsActive(true)}
-        marginL={4}
-        marginB={4}
+        btnText="Show Modal"
+        onPress={() => dispatch(setModalType('data_submitted_successfully'))}
       />
-      <AppModal isActive={isActive}>
-        <Button
-          btnText={'Close Modal'}
-          // iconType="email"
-          onPress={() => setIsActive(false)}
-          marginL={4}
-          marginB={4}
-        />
-      </AppModal>
     </>
   );
 };

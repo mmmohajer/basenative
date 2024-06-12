@@ -10,13 +10,7 @@ import {localStyles} from '../localStyles';
 const AlertContainer = ({children}) => {
   return (
     <>
-      <AppView
-        isFullWidth
-        style={{
-          position: 'absolute',
-        }}>
-        {children}
-      </AppView>
+      <AppView className="width-per-100 pos-abs">{children}</AppView>
     </>
   );
 };

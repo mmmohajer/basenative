@@ -7,6 +7,7 @@ import BaseTemplate from 'BaseComponents/PageParts/BaseTemplate';
 import Alert from 'BaseComponents/PageParts/Alert';
 import Loading from 'BaseComponents/PageParts/Loading';
 import Popup from 'BaseComponents/PageParts/Popup/Popup';
+import AppModal from 'BaseComponents/PageParts/AppModal';
 import OfflineNotice from 'BaseComponents/PageParts/OfflineNotice';
 
 import {localStyles} from './localStyles';
@@ -16,6 +17,7 @@ const ScreenContainer = ({isScrollable = false, children}) => {
   const loading = useSelector(state => state.loading);
   const notifications = useSelector(state => state.notifications);
   const modalType = useSelector(state => state.modalType);
+  const popupType = useSelector(state => state.popupType);
 
   return (
     <>
@@ -28,7 +30,8 @@ const ScreenContainer = ({isScrollable = false, children}) => {
           ''
         )}
         {loading && <Loading />}
-        {modalType && <Popup />}
+        {modalType && <AppModal />}
+        {popupType && <Popup />}
         <AppView
           className=""
           style={{height: getDeviceDimensions()?.screen?.height}}>
