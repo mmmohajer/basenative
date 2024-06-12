@@ -1,40 +1,14 @@
-import { View, Text } from "react-native";
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
 
-import AppView from "BaseComponents/AppView";
-import AppText from "BaseComponents/AppText";
-
-import { styles, fontStyleFunc } from "Styles";
-
-import { localStyles } from "../localStyles";
+import {localStyles} from '../localStyles';
 
 const TestView = () => {
   return (
     <>
       <AppView
-        bgColor="yellow"
-        widthInSize={200}
-        heightInSize={200}
-        brRadTL={50}
-        brRadTR={20}
-        brRadBL={10}
-        brRadBr={0}
-        brColorT="red"
-        brColorR="green"
-        brColorB="purple"
-        brColorL="silver"
-        brThicknessT={2}
-        brThicknessB={10}
-        brThicknessL={15}
-        brThicknessR={5}
-        paddingT={2}
-        paddingB={2}
-        paddingL={2}
-        paddingR={2}
-        marginT={2}
-        marginB={4}
-        marginL={5}
-        style={{ ...styles.shType1, ...styles.sh50, ...localStyles.test }}
-      ></AppView>
+        className="bg-yellow width-200 height-200 br-rad-tl-50 br-rad-tr-20 br-rad-bl-20 br-t-solid-2 br-b-solid-5 br-l-solid-15 br-r-solid-5 br-t-red br-r-green br-b-purple br-l-silver p-all-2 m-all-10 shadow-lg"
+        style={{...localStyles.test}}></AppView>
     </>
   );
 };

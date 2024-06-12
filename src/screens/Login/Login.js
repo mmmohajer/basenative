@@ -2,12 +2,12 @@ import {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-import AppView from 'BaseComponents/AppView';
-import AppText from 'BaseComponents/AppText';
-import AppTouchable from 'BaseComponents/AppTouchable';
-import LoginComponent from 'BaseComponents/LoginComponent';
-import ScreenContainer from 'Components/ScreenContainer';
-import PublicRoute from 'Components/PublicRoute';
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
+import AppTouchable from 'BaseComponents/ReusableComps/AppTouchable';
+import LoginComponent from 'BaseComponents/LoginRegister/LoginComponent';
+import ScreenContainer from 'Components/ScreenWrappers/ScreenContainer';
+import PublicRoute from 'Components/RouteHandlers/PublicRoute';
 
 import {styles, fontStyleFunc} from 'Styles';
 

@@ -1,22 +1,14 @@
-import { View, Text } from "react-native";
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
 
-import AppView from "BaseComponents/AppView";
-import AppText from "BaseComponents/AppText";
+import {localStyles} from '../localStyles';
 
-import { styles, fontStyleFunc } from "Styles";
-
-import { localStyles } from "../localStyles";
-
-const TitleSeparator = ({ title = "" }) => {
+const TitleSeparator = ({title = ''}) => {
   return (
     <>
       <AppText
-        bgColor="blue"
-        marginT={2}
-        marginB={2}
-        padding={2}
-        textProps={{ isBold: true, color: "white", textTransform: "uppercase" }}
-      >
+        className="bg-blue m-y-8 p-all-8"
+        textClassName="text-white f-b upper-case">
         {title}
       </AppText>
     </>

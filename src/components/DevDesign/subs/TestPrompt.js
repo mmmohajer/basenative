@@ -1,14 +1,14 @@
-import { View, Text } from "react-native";
+import {View, Text} from 'react-native';
 
-import AppView from "BaseComponents/AppView";
-import AppText from "BaseComponents/AppText";
-import Button from "BaseComponents/Button";
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
+import Button from 'BaseComponents/ReusableComps/Button';
 
-import { createAlert } from "Utils/alert";
+import {createAlert} from 'Utils/alert';
 
-import { styles, fontStyleFunc } from "Styles";
+import {styles, fontStyleFunc} from 'Styles';
 
-import { localStyles } from "../localStyles";
+import {localStyles} from '../localStyles';
 
 const TestPrompt = () => {
   return (
@@ -20,16 +20,16 @@ const TestPrompt = () => {
           onPress={() =>
             createAlert({
               isAlert: true,
-              title: "Alert",
-              message: "This is an alert",
+              title: 'Alert',
+              message: 'This is an alert',
               buttons: [
                 {
-                  text: "Cancel",
-                  onPress: () => console.log("Cancel"),
-                  style: "cancel",
+                  text: 'Cancel',
+                  onPress: () => console.log('Cancel'),
+                  style: 'cancel',
                 },
-                { text: "OK", onPress: () => console.log("OK") },
-                { text: "Ask Later", onPress: () => console.log("Ask later") },
+                {text: 'OK', onPress: () => console.log('OK')},
+                {text: 'Ask Later', onPress: () => console.log('Ask later')},
               ],
             })
           }
@@ -41,17 +41,17 @@ const TestPrompt = () => {
           onPress={() =>
             createAlert({
               isAlert: false,
-              title: "Get Email",
-              message: "Please let us know what your email is",
+              title: 'Get Email',
+              message: 'Please let us know what your email is',
               buttons: [
                 {
-                  text: "Cancel",
-                  onPress: () => console.log("Cancel"),
-                  style: "cancel",
+                  text: 'Cancel',
+                  onPress: () => console.log('Cancel'),
+                  style: 'cancel',
                 },
-                { text: "OK", onPress: (email) => console.log(email) },
+                {text: 'OK', onPress: email => console.log(email)},
               ],
-              option: "plain-text",
+              option: 'plain-text',
             })
           }
         />
@@ -61,17 +61,17 @@ const TestPrompt = () => {
           onPress={() =>
             createAlert({
               isAlert: false,
-              title: "Get Password",
-              message: "Please let us know what your password is",
+              title: 'Get Password',
+              message: 'Please let us know what your password is',
               buttons: [
                 {
-                  text: "Cancel",
-                  onPress: () => console.log("Cancel"),
-                  style: "cancel",
+                  text: 'Cancel',
+                  onPress: () => console.log('Cancel'),
+                  style: 'cancel',
                 },
-                { text: "OK", onPress: (password) => console.log(password) },
+                {text: 'OK', onPress: password => console.log(password)},
               ],
-              option: "secure-text",
+              option: 'secure-text',
             })
           }
         />

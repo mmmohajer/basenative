@@ -1,13 +1,11 @@
-import { View, Text } from "react-native";
-import { useState } from "react";
+import {useState} from 'react';
+import cx from 'classnames';
 
-import AppView from "BaseComponents/AppView";
-import AppText from "BaseComponents/AppText";
-import AppSwitch from "BaseComponents/AppSwitch";
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
+import AppSwitch from 'BaseComponents/ReusableComps/AppSwitch';
 
-import { styles, fontStyleFunc } from "Styles";
-
-import { localStyles } from "../localStyles";
+import {localStyles} from '../localStyles';
 
 const TestSwitch = () => {
   const [chaecked, setChecked] = useState(false);

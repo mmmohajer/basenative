@@ -1,49 +1,27 @@
-import { View, Text } from "react-native";
+import {View, Text} from 'react-native';
 
-import AppView from "BaseComponents/AppView";
-import AppText from "BaseComponents/AppText";
-import AppSwipeable from "BaseComponents/AppSwipeable";
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
+import AppSwipeable from 'BaseComponents/ReusableComps/AppSwipeable';
 
-import { styles, fontStyleFunc } from "Styles";
-
-import { localStyles } from "../localStyles";
+import {localStyles} from '../localStyles';
 
 const TestSwipeable = () => {
   return (
     <>
       <AppSwipeable
-        bgColor="red"
-        direction="col"
+        className="bg-red p-all-16"
         onSwipeRight={() => (
-          <AppText
-            bgColor="red"
-            // widthInSize={60}
-            isCentralizedInX1Dir
-            isCentralizedInX2Dir
-            color="white"
-            paddingL={2}
-            paddingR={2}
-          >
+          <AppText className="bg-green p-all-8" hAlign="center" vAlign="center">
             Right
           </AppText>
         )}
         onSwipeLeft={() => (
-          <AppText
-            // widthInSize={60}
-            bgColor="blue"
-            isCentralizedInX1Dir
-            isCentralizedInX2Dir
-            color="white"
-            paddingL={2}
-            paddingR={2}
-          >
+          <AppText hAlign="center" vAlign="center" className="bg-green p-all-8">
             Left Side
           </AppText>
-        )}
-      >
-        <AppText padding={2} bgColor="silver">
-          Hello Mohammad
-        </AppText>
+        )}>
+        <AppText className="bg-silver p-all-16">Hello Mohammad</AppText>
       </AppSwipeable>
     </>
   );

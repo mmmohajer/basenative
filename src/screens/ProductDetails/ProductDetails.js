@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
-import { View, Text } from "react-native";
-import { useRoute } from "@react-navigation/native";
+import {useState, useEffect} from 'react';
+import {View, Text} from 'react-native';
+import {useRoute} from '@react-navigation/native';
 
-import AppView from "BaseComponents/AppView";
-import AppText from "BaseComponents/AppText";
-import RoleBasedRoute from "Components/RoleBasedRoute";
-import ScreenContainer from "Components/ScreenContainer";
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
+import RoleBasedRoute from 'Components/RouteHandlers/RoleBasedRoute';
+import ScreenContainer from 'Components/ScreenWrappers/ScreenContainer';
 
-import { USER_GROUPS } from "Constants/userGroups";
+import {USER_GROUPS} from 'Constants/userGroups';
 
-import { styles, fontStyleFunc } from "Styles";
+import {styles, fontStyleFunc} from 'Styles';
 
-import { localStyles } from "./localStyles";
+import {localStyles} from './localStyles';
 
 const ProductDetails = () => {
   const route = useRoute();

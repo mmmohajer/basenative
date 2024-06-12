@@ -3,13 +3,13 @@ import {View, Text} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {useSelector, useDispatch} from 'react-redux';
 
-import AppView from 'BaseComponents/AppView';
-import AppText from 'BaseComponents/AppText';
-import Button from 'BaseComponents/Button';
-import LogoutComponent from 'BaseComponents/LogoutComponent';
-import ScreenContainer from 'Components/ScreenContainer';
-import AuthRoute from 'Components/AuthRoute';
-import PublicChat from 'Components/PublicChat';
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
+import Button from 'BaseComponents/ReusableComps/Button';
+import LogoutComponent from 'BaseComponents/LoginRegister/LogoutComponent';
+import ScreenContainer from 'Components/ScreenWrappers/ScreenContainer';
+import AuthRoute from 'Components/RouteHandlers/AuthRoute';
+import PublicChat from 'BaseComponents/ReusableComps/PublicChat';
 import DevDesign from 'Components/DevDesign';
 
 import {styles, fontStyleFunc} from 'Styles';

@@ -1,22 +1,19 @@
-import { View, Text } from "react-native";
-import { useState } from "react";
+import {useState} from 'react';
+import cx from 'classnames';
 
-import AppView from "BaseComponents/AppView";
-import AppText from "BaseComponents/AppText";
-import TextBox from "BaseComponents/TextBox";
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
+import TextBox from 'BaseComponents/FormComps/TextBox';
 
-import { styles, fontStyleFunc } from "Styles";
-
-import { localStyles } from "../localStyles";
+import {localStyles} from '../localStyles';
 
 const TestTextBox = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
 
   return (
     <>
       <AppView marginL={2} marginR={2}>
         <TextBox
-          textProps={{ color: "black", isBold: true }}
           // inputProps={{
           //   keyboardType: "ascii-capable",
           // }}
@@ -26,15 +23,15 @@ const TestTextBox = () => {
           placeholder="Type something"
           val={name}
           setVal={setName}
+          className="bg-red"
         />
         <TextBox
-          textProps={{ color: "red", isBold: true }}
           inputProps={{
             // keyboardType: "numeric",
-            clearButtonMode: "always",
+            clearButtonMode: 'always',
           }}
           isMultiLine={true}
-          heightInSize={200}
+          className="height-200"
         />
       </AppView>
     </>

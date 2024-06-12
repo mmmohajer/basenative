@@ -1,33 +1,23 @@
-import { View, Text } from "react-native";
+import cx from 'classnames';
 
-import AppView from "BaseComponents/AppView";
-import AppText from "BaseComponents/AppText";
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
 
-import { isIOS, isAndroid, getDeviceDimensions } from "Utils/helpers";
+import {isIOS, isAndroid, getDeviceDimensions} from 'Utils/helpers';
 
-import { styles, fontStyleFunc } from "Styles";
-
-import { localStyles } from "../localStyles";
+import {localStyles} from '../localStyles';
 
 const TestText = () => {
   return (
     <>
-      <AppText
-        textProps={{
-          color: "red",
-          isBold: true,
-          lineHeight: 20,
-          isCenterAlign: true,
-        }}
-      >
-        Hello {isIOS() && "IOS"} {isAndroid() && "android"}
+      <AppText textClassName={cx('text-red f-b text-lh-40 text-center')}>
+        Hello {isIOS() && 'IOS'} {isAndroid() && 'android'}
       </AppText>
       <AppText
+        className="p-all-8"
         textProps={{
           numberOfLines: 1,
-        }}
-        padding={2}
-      >
+        }}>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -37,8 +27,8 @@ const TestText = () => {
         of Letraset sheets containing Lorem Ipsum passages, and more recently
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
-        {getDeviceDimensions()?.window?.width >= 400 && <Text>Yes!!!</Text>}
       </AppText>
+      {getDeviceDimensions()?.window?.width >= 400 && <AppText>Yes!!!</AppText>}
     </>
   );
 };

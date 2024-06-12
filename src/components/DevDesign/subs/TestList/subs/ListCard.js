@@ -1,18 +1,18 @@
-import { View, Text, TouchableHighlight } from "react-native";
-import Swipeable from "react-native-gesture-handler/Swipeable";
+import {View, Text, TouchableHighlight} from 'react-native';
+import Swipeable from 'react-native-gesture-handler/Swipeable';
 
-import AppView from "BaseComponents/AppView";
-import AppText from "BaseComponents/AppText";
-import AppImage from "BaseComponents/AppImage";
-import AppTouchable from "BaseComponents/AppTouchable";
+import AppView from 'BaseComponents/ReusableComps/AppView';
+import AppText from 'BaseComponents/ReusableComps/AppText';
+import AppImage from 'BaseComponents/AppImage';
+import AppTouchable from 'BaseComponents/ReusableComps/AppTouchable';
 
-import { colors } from "Styles/base/vars";
+import {colors} from 'Styles/base/vars';
 
-import { styles, fontStyleFunc } from "Styles";
+import {styles, fontStyleFunc} from 'Styles';
 
-import { localStyles } from "../../../localStyles";
+import {localStyles} from '../../../localStyles';
 
-const ListCard = ({ title, content, image, onPress, onLongPress = null }) => {
+const ListCard = ({title, content, image, onPress, onLongPress = null}) => {
   return (
     <>
       <AppView isCentralizedInX2Dir={true} marginR={4}>
@@ -21,24 +21,21 @@ const ListCard = ({ title, content, image, onPress, onLongPress = null }) => {
             <AppView>
               <AppText>Hello</AppText>
             </AppView>
-          )}
-        >
+          )}>
           <AppTouchable
             type="noFeedback"
-            touchableProps={{ onPress, onLongPress }}
-            widthInSize={200}
-          >
+            touchableProps={{onPress, onLongPress}}
+            widthInSize={200}>
             <AppView
               widthInSize={200}
-              style={{ ...styles.shType1 }}
-              isCentralizedInX1Dir={true}
-            >
+              style={{...styles.shType1}}
+              isCentralizedInX1Dir={true}>
               <AppImage
                 isFromUri={true}
                 src={image}
                 width={200}
                 height={200}
-                imageProps={{ blurRadius: 1, borderRadius: 15 }}
+                imageProps={{blurRadius: 1, borderRadius: 15}}
                 isCentralizedInX1Dir={true}
                 isCentralizedInX2Dir={true}
                 brRad={10}
@@ -52,8 +49,7 @@ const ListCard = ({ title, content, image, onPress, onLongPress = null }) => {
                 padding={1}
                 brThickness={2}
                 brRad={5}
-                brColor="red"
-              >
+                brColor="red">
                 {content}
               </AppText>
             </AppView>

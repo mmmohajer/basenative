@@ -5,8 +5,8 @@ getJsContext() {
     echo """import { useState, useEffect } from \"react\";
 import { View, Text } from \"react-native\";
 
-import AppView from \"BaseComponents/AppView\";
-import AppText from \"BaseComponents/AppText\";
+import AppView from \"BaseComponents/ReusableComps/AppView\";
+import AppText from \"BaseComponents/ReusableComps/AppText\";
 
 import { styles, fontStyleFunc } from \"Styles\";
 
@@ -41,10 +41,10 @@ getJsPageContext() {
     echo """import { useState, useEffect } from \"react\";
 import { View, Text } from \"react-native\";
 
-import AppView from \"BaseComponents/AppView\";
-import AppText from \"BaseComponents/AppText\";
-import ScreenContainer from \"Components/ScreenContainer\";
-import PublicRoute from \"Components/PublicRoute\";
+import AppView from \"BaseComponents/ReusableComps/AppView\";
+import AppText from \"BaseComponents/ReusableComps/AppText\";
+import ScreenContainer from \"Components/ScreenWrappers/ScreenContainer\";
+import PublicRoute from \"Components/RouteHandlers/PublicRoute\";
 
 import { styles, fontStyleFunc } from \"Styles\";
 
