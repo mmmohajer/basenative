@@ -18,10 +18,10 @@ import TestTextBox from './subs/TestTextBox';
 import TestToggler from './subs/TestToggler';
 import TestView from './subs/TestView';
 import TestModal from './subs/TestModal';
-import TestPopup from './subs/TestPopup';
 import TestLoading from './subs/TestLoading';
 import TestPrompt from './subs/TestPrompt';
 import TestAlert from './subs/TestAlert';
+import TestCards from './subs/TestCards';
 // import TestImagePicker from './subs/TestImagePicker';
 
 import TitleSeparator from './subs/TitleSeparator';
@@ -69,17 +69,17 @@ const DevDesign = () => {
             <TitleSeparator title="Modal" />
             <TestModal />
 
-            <TitleSeparator title="Popup" />
-            <TestPopup />
-
             <TitleSeparator title="Loader" />
             <TestLoading />
 
             <TitleSeparator title="Prompt" />
             <TestPrompt />
 
-            <TitleSeparator title="TestAlert" />
+            <TitleSeparator title="Alerts" />
             <TestAlert />
+
+            <TitleSeparator title="Cards" />
+            <TestCards />
 
             {/* 
           <TitleSeparator title="Image Picker" />

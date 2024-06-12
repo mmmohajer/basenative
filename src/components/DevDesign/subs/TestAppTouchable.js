@@ -11,15 +11,18 @@ import {localStyles} from '../localStyles';
 const TestAppTouchable = () => {
   return (
     <>
-      <AppTouchable
-        hAlign="center"
-        vAlign="center"
-        className="width-150 height-80 bg-green"
-        onPress={() => console.log('Hello')}
-        onLongPress={() => console.log('Bye')}
-        type={APP_TOUCHABLE_TYPES['highlight']}>
-        <AppText>Hello</AppText>
-      </AppTouchable>
+      {Object.keys(APP_TOUCHABLE_TYPES)?.map((item, idx) => (
+        <AppTouchable
+          key={idx}
+          hAlign="center"
+          vAlign="center"
+          className="width-150 height-80 bg-green m-b-16"
+          onPress={() => console.log('Hello')}
+          onLongPress={() => console.log('Bye')}
+          type={APP_TOUCHABLE_TYPES[item]}>
+          <AppText>{item}</AppText>
+        </AppTouchable>
+      ))}
     </>
   );
 };

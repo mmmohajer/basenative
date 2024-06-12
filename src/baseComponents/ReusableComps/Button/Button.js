@@ -9,7 +9,14 @@ import {COLORS} from 'Styles/base/appVariables';
 
 import {localStyles} from './localStyles';
 
-const Button = ({btnText, onPress, onLongPress, iconProps, className}) => {
+const Button = ({
+  btnType = 1,
+  btnText,
+  onPress,
+  onLongPress,
+  iconProps,
+  className,
+}) => {
   return (
     <>
       <AppView direction="row">
@@ -21,7 +28,11 @@ const Button = ({btnText, onPress, onLongPress, iconProps, className}) => {
             direction="row"
             vAlign="center"
             hAlign="center"
-            className={cx('bg-theme-one p-y-8 p-x-16 br-rad-4', className)}>
+            className={cx(
+              'p-y-16 p-x-16 br-rad-4 width-per-100',
+              btnType === 1 && 'bg-theme-one',
+              className,
+            )}>
             {iconProps?.iconType ? (
               <>
                 <Icon

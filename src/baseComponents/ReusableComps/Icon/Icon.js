@@ -15,6 +15,15 @@ const Icon = ({name = 'email', size = 20, color = 'black', ...props}) => {
         {name === 'email' && (
           <FontAwesome name="envelope" style={{color, fontSize: size}} />
         )}
+        {name === 'dashboard' && (
+          <FontAwesome name="dashboard" style={{color, fontSize: size}} />
+        )}
+        {name === 'plus-circle' && (
+          <FontAwesome name="plus-circle" style={{color, fontSize: size}} />
+        )}
+        {name === 'minus-circle' && (
+          <FontAwesome name="minus-circle" style={{color, fontSize: size}} />
+        )}
       </AppView>
     </>
   );

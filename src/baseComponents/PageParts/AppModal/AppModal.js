@@ -21,7 +21,7 @@ const AppModal = () => {
         transparent={modalProps?.isTransparent || false}>
         <SafeAreaView
           style={{paddingTop: isAndroid() && StatusBar.currentHeight}}>
-          {modalType === 'data_submitted_successfully' && (
+          {modalType === 'data-submitted-successfully' && (
             <DataSubmittedSuccessfully {...modalProps} />
           )}
         </SafeAreaView>

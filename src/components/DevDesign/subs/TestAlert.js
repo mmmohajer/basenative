@@ -6,6 +6,7 @@ import AppText from 'BaseComponents/ReusableComps/AppText';
 import Button from 'BaseComponents/ReusableComps/Button';
 
 import {addAlertItem} from 'Utils/notifications';
+import {ALERT_TYPES} from 'Constants/DevDesignVars';
 
 import {localStyles} from '../localStyles';
 
@@ -14,14 +15,16 @@ const EmptyForCopy = () => {
   return (
     <>
       <AppView>
-        <Button
-          btnText="Show Alert"
-          onPress={() => {
-            addAlertItem(dispatch, 'That is fine!', 'success');
-            addAlertItem(dispatch, 'That is fine!', 'error');
-            addAlertItem(dispatch, 'That is fine!', 'warning');
-          }}
-        />
+        {Object.keys(ALERT_TYPES)?.map((item, idx) => (
+          <Button
+            key={idx}
+            className="m-b-16"
+            btnText={`Show Alert of type ${ALERT_TYPES[item]}`}
+            onPress={() => {
+              addAlertItem(dispatch, 'That is fine!', ALERT_TYPES[item]);
+            }}
+          />
+        ))}
       </AppView>
     </>
   );

@@ -6,6 +6,7 @@ import AppText from 'BaseComponents/ReusableComps/AppText';
 import Button from 'BaseComponents/ReusableComps/Button';
 
 import {setModalType} from 'Reducers/general/modalType';
+import {MODAL_TYPES} from 'Constants/DevDesignVars';
 
 import {localStyles} from '../localStyles';
 
@@ -14,8 +15,10 @@ const TestModal = () => {
   return (
     <>
       <Button
-        btnText="Show Modal"
-        onPress={() => dispatch(setModalType('data_submitted_successfully'))}
+        btnText={`Show Modal of type ${MODAL_TYPES.dataSubmittedSuccessfully}`}
+        onPress={() =>
+          dispatch(setModalType(MODAL_TYPES.dataSubmittedSuccessfully))
+        }
       />
     </>
   );

@@ -11,9 +11,9 @@ import {localStyles} from '../localStyles';
 const TestPrompt = () => {
   return (
     <>
-      <AppView paddingL={2}>
+      <AppView>
         <Button
-          marginB={2}
+          className="m-b-16"
           btnText="Show 3 Buttons Alert"
           onPress={() =>
             createAlert({
@@ -34,7 +34,7 @@ const TestPrompt = () => {
         />
 
         <Button
-          marginB={2}
+          className="m-b-16"
           btnText="Show Simple Input Prompt"
           onPress={() =>
             createAlert({

@@ -6,8 +6,6 @@ import language from './general/language';
 import activeMenu from './general/activeMenu';
 import modalType from './general/modalType';
 import modalProps from './general/modalProps';
-import popupType from './general/popupType';
-import popupProps from './general/popupProps';
 import mobileNavIsActive from './general/mobileNavIsActive';
 
 import isAuthenticated from './apiCalls/isAuthenticated';
@@ -20,8 +18,6 @@ const reducer = combineReducers({
   activeMenu,
   modalType,
   modalProps,
-  popupType,
-  popupProps,
   mobileNavIsActive,
   isAuthenticated,
   profile,
