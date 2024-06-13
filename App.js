@@ -21,10 +21,10 @@ const initializeFirebase = () => {
       appId: "1:118642292942:android:e5fa61193d9b8fe0c8389f",
       //measurementId: "<your-measurement-id>" // Optional
     };
-  
     // Check if Firebase is already initialized
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
     }
   }catch
   {
