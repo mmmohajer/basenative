@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "118642292942",
+    "project_id": "nativebase-2049c",
+    "storage_bucket": "nativebase-2049c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118642292942:android:e5fa61193d9b8fe0c8389f",
+        "android_client_info": {
+          "package_name": "com.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBonW9claSRcB54cvB1YqMUpburbliT1ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
